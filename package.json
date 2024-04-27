@@ -3,5 +3,8 @@
     "e": "^0.2.33",
     "eslint": "^9.1.1",
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
