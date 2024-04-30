@@ -1,8 +1,5 @@
-const _= require("lodash");
-const os = require("os");
+const fs = require("fs");
 
-const people = require("./people");
+const data = fs.readFile("myfile.txt");
 
-// console.log(_.last(people));
-
-console.log(os.platform());
+console.log(data.toString());
