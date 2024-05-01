@@ -1,9 +1,9 @@
 const fs = require("fs");
 
-const ourReadStream  = fs.createReadStream(`${__dirname}/bigData.txt`, "utf-8");
+const ourReadStream  = fs.createReadStream(`${__dirname}/bigData.txt`); //  utf8
 
-ourReadStream.on("data", (data)=>{
+ourReadStream.on("data", (chunk)=>{ // if utf8 has then type data instead.
 
-    console.log(data);
+    console.log(chunk.toString());
 
 })
