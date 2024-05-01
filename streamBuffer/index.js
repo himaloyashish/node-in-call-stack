@@ -15,6 +15,10 @@ const server = http.createServer((req, res)=>{
     }
 })
 
+
+server.listen(3000);
+console.log("listening on port 3000");
+
 // const fs = require("fs");
 
 // const ourReadStream  = fs.createReadStream(`${__dirname}/bigData.txt`); //  utf8
