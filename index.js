@@ -2,6 +2,6 @@
 
 // const data = fs.readFile("myfile.txt");
 
-// console.log(data.toString());
+console.log(data.toString());
 
 
