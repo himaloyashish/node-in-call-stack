@@ -1,5 +1,7 @@
-const fs = require("fs");
+// const fs = require("fs");
 
-const data = fs.readFile("myfile.txt");
+// const data = fs.readFile("myfile.txt");
 
-console.log(data.toString());
+// console.log(data.toString());
+
+
