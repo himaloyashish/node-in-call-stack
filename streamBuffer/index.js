@@ -2,11 +2,21 @@ const http = require("http");
 
 const server = http.createServer((req, res)=>{
     if(req.url == "/"){
-        res.write("Hello programmers !");
-        res.write("How are you doing?");
+        res.write('<html><head><title>form</title></head>');
+        res.write('<body><form method="post" action="/process" > <input name="message /></form> </body> ');
         res.end();
-    } else if(req.url == "/about"){
-        res.write("This is about page");
+    } else if(req.url == "/process" && req.method=="POST"){
+        const body = []
+        req.on('data', (chunk)=>{
+            body.push(chunk);
+        })
+
+        req.on('end', (chunk)=>{
+            console.log('Stream finished');
+            const parsedBody = Buffer.concat(body).toString();
+            console.log(parsedBody);
+        })
+        res.write("This is process page");
         res.end();
     }else {
         
