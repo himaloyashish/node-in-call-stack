@@ -34,6 +34,7 @@ app.printAQuote = function printAQuote() {
   const selectQuote = allQuotes[randomQuotes - 1];
 
   console.log(selectQuote);
+  
 
 };
 
